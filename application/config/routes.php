@@ -55,3 +55,5 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['dashboard'] = 'User';
 $route['pengguna'] = 'User/daftar_pengguna';
+$route['alat'] = 'Alat';
+$route['penggunaan_air'] = 'Penggunaan';

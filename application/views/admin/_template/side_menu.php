@@ -15,30 +15,29 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">MAIN NAVIGATION</li>
-      <li>
+      <li class="dashboard">
         <a href="<?php echo base_url('dashboard') ?>">
           <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           <span class="pull-right-container">
-            <small class="label pull-right bg-green">new</small>
           </span>
         </a>
       </li>
-      <li>
+      <li class="pengguna">
         <a href="<?php echo base_url('pengguna') ?>">
           <i class="fa fa-user"></i> <span>Pengguna</span>
         </a>
       </li>
-      <li>
+      <li class="alat">
         <a href="<?php echo base_url('alat') ?>">
           <i class="fa fa-wrench"></i> <span>Alat & Sensor</span>
         </a>
       </li>
-      <li>
+      <li class="penggunaan_air">
         <a href="<?php echo base_url('penggunaan_air') ?>">
           <i class="fa fa-bitbucket"></i> <span>Penggunaan Air</span>
         </a>
       </li>
-      <li class="treeview">
+      <li class="treeview laporan">
         <a href="#">
           <i class="fa fa-files-o"></i>
           <span>Laporan</span>

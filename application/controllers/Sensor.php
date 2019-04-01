@@ -12,24 +12,23 @@ class Sensor extends CI_Controller{
 
   public function store() {
     $data_sensor = array(
-      'jenis_sensor' => $this->input->post('jenis_sensor'),
-      'id_alat' => $this->input->post('id_alat')
+      'jenis_sensor' => $this->input->post('sensor')      
     );
 
-    $this->SensorModel->store($data_sensor);
+    $this->db->insert('sensor', $data_sensor);
     redirect('alat');
   }
 
   public function edit($id) {
-    $data['data_sensor'] = $this->db->where('id_sensor',$id)->get('sensor')->row();
+    $sensor = $this->db->where('id_sensor',$id)->get('sensor')->row();
+    echo json_encode($sensor);
   }
 
-  public function update($id) {
-    $nama = array(
-      'jenis_sensor' => $jenis_sensor,
-      'id_alat' => $id_alat,
+  public function update() {
+    $sensor = array(
+      'jenis_sensor' => strtoupper($this->input->post('sensor'))
     );
-    if ($this->SensorModel->update($id, $data) == true) {
+    if ($this->SensorModel->update($this->input->post('id_sensor'), $sensor) == true) {
       redirect('alat');
     }
   }
